@@ -41,13 +41,12 @@
                     </select><br><br>
                 </div>
                 <button type="submit" class="btn btn-primary">Agregar</button>
-                
+                <div class="form-group mt-3">
+                  <label for="importCSV">Importar CSV:</label>
+                  <input type="file" id="importCSV" accept=".csv">
+                  <button id="loadCSV" class="btn btn-primary">Cargar</button>
+              </div>
             </form>
-            <div class="form-group mt-3">
-              <label for="importCSV">Importar CSV:</label>
-              <input type="file" id="importCSV" accept=".csv">
-              <button id="loadCSV" class="btn btn-primary">Cargar</button>
-          </div>
         </div>
 
         <!-- Tabla de productos -->
@@ -81,4 +80,5 @@
     <script src="main.js"></script>
 </body>
 </html>
+
 
