@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Store</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-3">PuzzleMania</h1>
+
+        <!-- Formulario de inserción de productos -->
+        <div class="mt-5">
+            <h3>Agregar producto</h3>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="folio">Folio:</label>
+                    <input type="text" class="form-control" id="folio" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio:</label>
+                    <input type="number" class="form-control" id="precio" required>
+                </div>
+                <div class="form-group">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" class="form-control" id="cantidad" required>
+                </div>
+                <div class="form-group">
+                  <label for="dificultad">Dificultad:</label>
+                  <select id="dificultad" name="dificultad">
+                      <option value="1">★</option>
+                      <option value="2">★★</option>
+                      <option value="3">★★★</option>
+                      <option value="4">★★★★</option>
+                      <option value="5">★★★★★</option>
+                    </select><br><br>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <div class="form-group mt-3">
+                  <label for="importCSV">Importar CSV:</label>
+                  <input type="file" id="importCSV" accept=".csv">
+                  <button id="loadCSV" class="btn btn-primary">Cargar</button>
+              </div>
+            </form>
+        </div>
+
+        <!-- Tabla de productos -->
+        <div class="mt-5">
+            <h3>Productos</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Folio</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Dificultad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable">
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Totales y ganancias -->
+        <div class="mt-5">
+            <h3>Resumen</h3>
+            <p>Total: <span id="total">0</span></p>
+            <p>Ganancias: <span id="ganancias">0</span></p>
+            <button id="exportCSV" class="btn btn-success">Exportar CSV</button>
+            <!-- <input type="file" id="importCSV" accept=".csv" /> -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
